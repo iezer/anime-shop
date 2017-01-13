@@ -1,0 +1,38 @@
+<style>
+ .header, .footer {
+   position: fixed;
+   height: 75px;
+   width: 100%;
+   background: orange;
+   left: 0px;
+ }
+
+ .header { top: 0px; }
+
+ .footer { bottom: 0px; }
+
+ .scroll-container {
+   position: fixed;
+   width: 100%;
+   top: 75px;
+   bottom: 75px;
+   overflow-y: scroll;
+
+   /* Required for momentum scrolling in iOS Safari.
+      also overflow-y has to be 'scroll' and not 'auto'
+    */
+   -webkit-overflow-scrolling: touch;
+ }
+</style>
+
+<div class='header'>
+  Header
+</div>
+
+<div class='scroll-container'>
+  {{outlet}}
+</div>
+
+<div class='footer'>
+  Footer
+</div>

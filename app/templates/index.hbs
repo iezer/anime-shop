@@ -1,0 +1,13 @@
+<style>
+ .item {
+   border: 1px solid black;
+   margin: 5px;
+ }
+</style>
+{{#each model as |item|}}
+  {{#link-to 'item' item}}
+    <div class='item'>
+      {{item.name}}
+    </div>
+  {{/link-to}}
+{{/each}}
