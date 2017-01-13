@@ -26,7 +26,11 @@
 </style>
 
 <div class='header'>
-  Header
+  {{#from-elsewhere name="header" as |header|}}
+    {{#liquid-bind header rules=animationRules as |opts|}}
+      {{opts.title}}
+    {{/liquid-bind}}
+  {{/from-elsewhere}}
 </div>
 
 <div class='scroll-container'>

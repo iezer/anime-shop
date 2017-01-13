@@ -4,6 +4,7 @@
    margin: 5px;
  }
 </style>
+
 {{#each model as |item|}}
   {{#link-to 'item' item}}
     <div class='item'>
@@ -11,3 +12,5 @@
     </div>
   {{/link-to}}
 {{/each}}
+
+{{to-elsewhere named="header" send=(hash title="Product List")}}
