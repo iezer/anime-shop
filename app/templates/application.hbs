@@ -17,6 +17,16 @@
    top: 75px;
    bottom: 75px;
  }
+
+ /* This was a bit of a gotcha and is required to make fly-to animations
+    when smooth when animating between containers of different sizes.
+    Without this the smaller container will block out the larger one
+    before the animation is complete. Try removing it to see.
+  */
+ .liquid-container, .liquid-child {
+   weight: 100%;
+   height: 100%;
+ }
 </style>
 
 <div class='header'>
@@ -28,7 +38,8 @@
 </div>
 
 <div class='application__body'>
-  {{outlet}}
+  {{! Now that we are animating the route transition we need a liquid-outlet}}
+  {{liquid-outlet}}
 </div>
 
 <div class='footer'>

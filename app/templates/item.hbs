@@ -1,10 +1,10 @@
 <style>
- .item {
+ .item.focused {
    border: 1px solid red;
-   margin: 5px;
+   margin: 5px 20px 5px 20px;
  }
 </style>
-<div class='item'>
+<div class='item focused' data-item-id={{model.id}}>
   {{model.name}} Detail
 </div>
 

@@ -18,7 +18,8 @@
 <div class='index__scroll-container'>
   {{#each model as |item|}}
     {{#link-to 'item' item}}
-      <div class='item'>
+      {{! Liquid Fire will match elements on data-item-id}}
+      <div class='item' data-item-id={{item.id}}>
         {{item.name}}
       </div>
     {{/link-to}}
