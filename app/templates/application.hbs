@@ -1,0 +1,32 @@
+<style>
+ .header, .footer {
+   position: fixed;
+   height: 75px;
+   width: 100%;
+   background: orange;
+   left: 0px;
+ }
+
+ .header { top: 0px; }
+
+ .footer { bottom: 0px; }
+
+ .application__body {
+   position: fixed;
+   width: 100%;
+   top: 75px;
+   bottom: 75px;
+ }
+</style>
+
+<div class='header'>
+  Header
+</div>
+
+<div class='application__body'>
+  {{outlet}}
+</div>
+
+<div class='footer'>
+  Footer
+</div>
