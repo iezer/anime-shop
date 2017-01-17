@@ -15,7 +15,7 @@
  }
 </style>
 
-<div class='index__scroll-container'>
+{{#memory-scroll class='index__scroll-container' key='index-items'}}
   {{#each model as |item|}}
     {{#link-to 'item' item}}
       {{! Liquid Fire will match elements on data-item-id}}
@@ -24,6 +24,6 @@
       </div>
     {{/link-to}}
   {{/each}}
-</div>
+{{/memory-scroll}}
 
 {{to-elsewhere named="header" send=(hash title="Product List")}}
